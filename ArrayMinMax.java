@@ -28,7 +28,7 @@ public class ArrayMinMax {
                 smallest = num;
             }
             if (num > largest) {
-                secondLargest = largest; // Update second largest
+                secondLargest = largest;
                 largest = num;
             } else if (num > secondLargest && num < largest) {
                 secondLargest = num;
@@ -47,3 +47,4 @@ public class ArrayMinMax {
         sc.close();
     }
 }
+
