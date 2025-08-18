@@ -25,7 +25,7 @@ public class TriangleTypeAndArea {
                 System.out.println("The triangle is Scalene.");
             }
 
-            double s = (a + b + c) / 2; // semi-perimeter
+            double s = (a + b + c) / 2; 
             double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
             System.out.println("Area of the triangle: " + area);
@@ -37,3 +37,4 @@ public class TriangleTypeAndArea {
         sc.close();
     }
 }
+
