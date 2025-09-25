@@ -5,6 +5,7 @@ public class MergedArray {
         System.out.print("Enter the size of first array:  ");
         int s1 = scan.nextInt();
         int[] array1= new int[s1];
+        System.out.print("Enter  " + s1 + " elements:  ");
         for(int i=0;i<s1;i++){
             array1[i]= scan.nextInt();
         }
@@ -12,6 +13,7 @@ public class MergedArray {
         System.out.print("Enter the size of second array:  ");
         int s2 = scan.nextInt();
         int[] array2= new int[s2];
+        System.out.print("Enter " + s2 + " elements:  ");
         for(int i=0;i<s2;i++){
             array2[i]= scan.nextInt();
         }
