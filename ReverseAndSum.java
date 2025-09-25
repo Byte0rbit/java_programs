@@ -1,33 +1,27 @@
 import java.util.Scanner;
-class SumRev 
-   {
+
+class SumRev {
     int a, m = 0, sum = 0;
-    void sum(int num) 
-       {
-        do 
-          {
+    void sum(int num) {
+        do {
             a = num % 10;
             sum = sum + a;
             num = num / 10;
-          } 
-        while (num > 0);
+        } while (num > 0);
         System.out.println("Sum of digits = " + sum);
     }
-    void reverse(int num) 
-      {
-        do 
-         {
+    void reverse(int num) {
+        do {
             a = num % 10;
             m = m * 10 + a;
             num = num / 10;
-         } 
-        while (num > 0);
+        } while (num > 0);
         System.out.println("Reverse : " + m);
     }
 }
-class SumReverse {
-    public static void main(String[] args) 
-    {
+
+class ReverseAndSum {
+    public static void main(String[] args) {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter any number : ");
@@ -35,5 +29,6 @@ class SumReverse {
         SumRev obj = new SumRev();
         obj.sum(n);
         obj.reverse(n);
-    }
+        sc.close();
+    }
 }
