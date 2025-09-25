@@ -3,38 +3,38 @@ import java.util.Scanner;
 public class BaseConversion {
 
     static String toBinary(int num) {
-        StringBuilder binary = new StringBuilder();
+        String binary = "";
         int n = num;
         while (n > 0) {
             int rem = n % 2;
-            binary.insert(0, rem);
+            binary = rem + binary;  // prepend remainder
             n = n / 2;
         }
-        return (binary.length() > 0) ? binary.toString() : "0";
+        return (binary.length() > 0) ? binary : "0";
     }
 
     static String toOctal(int num) {
-        StringBuilder octal = new StringBuilder();
+        String octal = "";
         int n = num;
         while (n > 0) {
             int rem = n % 8;
-            octal.insert(0, rem);
+            octal = rem + octal;  // prepend remainder
             n = n / 8;
         }
-        return (octal.length() > 0) ? octal.toString() : "0";
+        return (octal.length() > 0) ? octal : "0";
     }
 
     static String toHexadecimal(int num) {
-        StringBuilder hex = new StringBuilder();
+        String hex = "";
         int n = num;
         char[] hexDigits = {'0','1','2','3','4','5','6','7',
                             '8','9','A','B','C','D','E','F'};
         while (n > 0) {
             int rem = n % 16;
-            hex.insert(0, hexDigits[rem]);
+            hex = hexDigits[rem] + hex;  // prepend remainder
             n = n / 16;
         }
-        return (hex.length() > 0) ? hex.toString() : "0";
+        return (hex.length() > 0) ? hex : "0";
     }
 
     public static void main(String[] args) {
@@ -45,5 +45,7 @@ public class BaseConversion {
         System.out.println("Binary: " + toBinary(number));
         System.out.println("Octal: " + toOctal(number));
         System.out.println("Hexadecimal: " + toHexadecimal(number));
+
+        sc.close();
     }
 }
