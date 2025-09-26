@@ -7,8 +7,8 @@ public class ArrayMinMax {
         System.out.print("Enter how many numbers: ");
         int n = sc.nextInt();
 
-        if (n < 2) {
-            System.out.println("Need at least 2 numbers!");
+        if (n < 10) {
+            System.out.println("Need at least 10 numbers!");
             return;
         }
 
@@ -47,4 +47,5 @@ public class ArrayMinMax {
         sc.close();
     }
 }
+
 
